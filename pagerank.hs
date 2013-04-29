@@ -106,4 +106,5 @@ main = do
     putStrLn "How many iters?"
     numIters <- getLine
     f <- readFile "input.txt"
+    -- damping factor defaults to 0.85
     writeFile "output.txt" $ show $ process f (read numIters :: Int) 0.85
